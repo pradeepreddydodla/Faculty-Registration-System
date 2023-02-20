@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding:0;
+}
+body{
+    background-image: url(images/bg_img.jpg);
+    
+    background-size: cover;
+}
+#brand-image{
+    height: 70px;
+    width: auto;
+    background-size: auto 10px;
+    position: relative;
+}
+.navbar-inverse .navbar-text {
+    color: #fff;
+    font-size: 16pt;
+    text-align: center;
+    position: relative;
+    margin-left: 10%;
+    float: none;
+}
+.notices>p{
+	margin-top:-10px;
+}
+.notices>p>#dept{
+    font-size: 12pt;
+}
+.navbar{
+    padding-bottom: 0px; 
+}
+.content{
+    margin-top: 220px;
+}
+.student>p{
+	font-size:14pt;
+}
+.faculty>p{
+	font-size:14pt;
+}
+.student,.faculty{
+    background: rgba(0,0,0,0.65);
+    padding: 5% 10%;
+    color: #fff;
+    margin-top: 9%;
+    box-shadow: none;
+}

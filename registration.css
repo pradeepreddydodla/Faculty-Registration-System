@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding:0;
+}
+body{
+    background-image: url(images/bg_img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#brand-image{
+    height: 70px;
+    width: auto;
+    background-size: auto 10px;
+    position: relative;
+}
+.navbar-inverse .navbar-text {
+    color: #fff;
+    font-size: 16pt;
+    text-align: center;
+    position: relative;
+    margin-left: 10%;
+    float: none;
+}
+.notices>p{
+	margin-top:-10px;
+}
+.notices>p>#dept{
+    font-size: 12pt;
+}
+.navbar{
+    padding-bottom: 0px; 
+}
+.content{
+    margin-top: 220px;
+}
+form{
+    background: rgba(0,0,0,0.55);
+    padding-top: 8%;
+	padding-bottom:5%;
+	padding-left:5%;
+	padding-right:5%;
+    color: #fff;
+    box-shadow: none;
+}
+form>legend{
+    color: #fff;
+}
+
+/****************** 768 ***********************/
+
+@media(max-width: 768px){
+    *{
+    margin: 0;
+    padding:0;
+}
+body{
+    background-image: url(images/bg_img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;    
+}
+#brand-image{
+    height: 70px;
+    width: auto;
+    background-size: auto 10px;
+    position: relative;
+}
+.navbar-inverse .navbar-text {
+    color: #fff;
+    font-size: 12pt;
+    text-align: center;
+    position: relative;
+    margin-left: 10%;
+    float: none;
+}
+.notices>p{
+    margin-top: 50px;
+}
+.notices>p>#dept{
+    font-size: 12pt;
+}
+.navbar{
+    padding-bottom: 0px; 
+}
+.content{
+    margin-top: 220px;
+}
+form{
+    background: rgba(0,0,0,0.55);
+    padding: 5% 5%;
+    color: #fff;
+    box-shadow: none;
+}
+form>legend{
+    color: #fff;
+}
+    
+}
+
+/******************* 992 ********************/
+@media(max-width: 992px){
+    *{
+    margin: 0;
+    padding:0;
+}
+body{
+    background-image: url(images/bg_img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#brand-image{
+    height: 70px;
+    width: auto;
+    background-size: auto 10px;
+    position: relative;
+}
+.navbar-inverse .navbar-text {
+    color: #fff;
+    font-size: 12pt;
+    text-align: center;
+    position: relative;
+    margin-left: 10%;
+    float: none;
+}
+.notices>p{
+    margin-top: 50px;
+}
+.notices>p>#dept{
+    font-size: 12pt;
+}
+.navbar{
+    padding-bottom: 0px; 
+}
+.content{
+    margin-top: 220px;
+}
+form{
+    background: rgba(0,0,0,0.55);
+    padding: 5% 5%;
+    color: #fff;
+    box-shadow: none;
+}
+form>legend{
+    color: #fff;
+}
+    
+}

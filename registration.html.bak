@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Register</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="registration.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]--> 
+	<style type="text/css">
+	#warning
+	{
+	color:#ff5500;
+	visibility:hidden;
+	}
+	#msg{
+	color:#00ef4f;
+	
+	}
+	</style>
+	<script type="text/javascript">
+	var counter=0;
+	function validate()
+	{
+	var t1,t2;
+	var k=0;
+	counter++;
+	
+	for(i=1;i<=5;i++)
+	{
+	for(j=i+1;j<=6;j++)
+	{
+	t1="theory"+i;
+	t2="theory"+j;
+	if(document.getElementById(t1).value==document.getElementById(t2).value && document.getElementById(t2).value!='nill')
+	{
+	
+	document.getElementById(t1).style.backgroundColor='#ffe04f';
+	document.getElementById(t2).style.backgroundColor='#ffe04f';
+	document.getElementById('warning').style.visibility = 'visible';	
+	k=1;
+	counter--;
+	}
+	else if(document.getElementById(t1).value!=document.getElementById(t2).value && k==0)
+	{
+	document.getElementById(t1).style.backgroundColor='white';
+	document.getElementById(t2).style.backgroundColor='white';
+	document.getElementById('warning').style.visibility = 'hidden';
+	
+	}
+	
+	}
+	}
+	if(document.getElementById('theory1').value!='nill' && document.getElementById('theory2').value!='nill' && document.getElementById('theory3').value!='nill' && document.getElementById('theory4').value!='nill' && document.getElementById('theory5').value!='nill' && document.getElementById('theory6').value!='nill' )
+	{
+	document.getElementById("sub").disabled = false;
+	}
+	else{
+	document.getElementById("sub").disabled = true;
+	}
+	}
+	
+	</script>
+  </head>
+  <body>
+            <nav class="navbar navbar-inverse navbar-top" role="navigation">
+                 <div class="navbar-header">
+                      <a class="navbar-brand" href="index.html">
+                        <img alt="Brand" src="images/logo.png" id="brand-image">
+                      </a>
+                </div>
+                <div class="notices">           
+                <h3 class="navbar-text">School of Information Technology and Engineering</h3>
+                <p class="navbar-text">Fall Semester 2017-2018 Course Registration Portal</p>
+                </div>
+            </nav>
+            <div class="container">
+             
+                    <div class="col-md-offset-2 col-md-7">
+                        <div class="course">
+                            <form method="POST" action="updation.php" role="form">
+                            <legend>Registration List</legend>
+
+                            <div class="col-md-offset-2 col-md-8">
+                                <div class="form-group">
+                                  <label for="theory">List of Courses</label>
+								
+								  
+								  <span id="msg"><center><h4>Select all the options to enable submit!!</h4></center></span>
+								 
+								  <span id="warning"><h4><center>Please Select different courses</center></h4></span>
+								  
+								  
+                                  <select class="form-control" name="theory1" id="theory1" onchange="validate()">
+								    <option value="nill">--select--</option>
+<option value=".Net Programming">.Net Programming</option>
+<option value="3D Animation">3D Animation</option>
+<option value="Advanced Compositing">Advanced Compositing</option>
+<option value="Agile software development ">Agile software development </option>
+<option value="Android Programming">Android Programming</option>
+<option value="Artificial Intelligence">Artificial Intelligence</option>
+<option value="Big Data Analytics">Big Data Analytics</option>
+<option value="Biometric Systems">Biometric Systems</option>
+<option value="Cloud computing and virtualization ">Cloud computing and virtualization </option>
+<option value="Computational Thinking">Computational Thinking</option>
+<option value="Computer Architecture and Organization">Computer Architecture and Organization</option>
+<option value="Computer Graphics / Computer Graphics and Multimedia">Computer Graphics / Computer Graphics and Multimedia</option>
+<option value="Computer Hardware">Computer Hardware</option>
+<option value="Cryptography ">Cryptography </option>
+<option value="Data Analytics ">Data Analytics </option>
+<option value="Data Communication and Computer Networks">Data Communication and Computer Networks</option>
+<option value="Data Structures / Advanced Data structures and algorithms ">Data Structures / Advanced Data structures and algorithms </option>
+<option value="Data Ware housing and Data Mining">Data Ware housing and Data Mining</option>
+<option value="Database Mangement Systems">Database Mangement Systems</option>
+<option value="Design Fundamentals">Design Fundamentals</option>
+<option value="Design Patterns">Design Patterns</option>
+<option value="Digital Cinematography">Digital Cinematography</option>
+<option value="Digital Image Procesing">Digital Image Procesing</option>
+<option value="Digital Logic and Microprocessor / Digital Computer Fundamentals / Advanced digital communication ">Digital Logic and Microprocessor / Digital Computer Fundamentals / Advanced digital communication </option>
+<option value="Distributed Systems">Distributed Systems</option>
+<option value="E-Goverance">E-Goverance</option>
+<option value="Embedded system / Advanced Embedded systems">Embedded system / Advanced Embedded systems</option>
+<option value="Enterprise Resource Planning">Enterprise Resource Planning</option>
+<option value="Fundamentals of Art">Fundamentals of Art</option>
+<option value="Game Development">Game Development</option>
+<option value="Graph Theory and Its Applications">Graph Theory and Its Applications</option>
+<option value="Graphic Design Techniques">Graphic Design Techniques</option>
+<option value="Human Computer Interaction / Principles of User Inerface Design">Human Computer Interaction / Principles of User Inerface Design</option>
+<option value="Information and System  Security / Network and Information Security">Information and System  Security / Network and Information Security</option>
+<option value="Internet of Things">Internet of Things</option>
+<option value="Machine Learning">Machine Learning</option>
+<option value="Mainframe Computing">Mainframe Computing</option>
+<option value="Media Ethics">Media Ethics</option>
+<option value="Mobile Application Development">Mobile Application Development</option>
+<option value="Modeling and Texturing">Modeling and Texturing</option>
+<option value="Multimedia Computing">Multimedia Computing</option>
+<option value="Network Administration">Network Administration</option>
+<option value="Network Management Systems">Network Management Systems</option>
+<option value="Network Programming">Network Programming</option>
+<option value="Object Oriented  Analysis and Design">Object Oriented  Analysis and Design</option>
+<option value="Object Oriented Programming">Object Oriented Programming</option>
+<option value="Object Oriented Software Engineering ">Object Oriented Software Engineering </option>
+<option value="Open Source Programming">Open Source Programming</option>
+<option value="Operating Systems">Operating Systems</option>
+<option value="Optimization techniques">Optimization techniques</option>
+<option value="Programming in Java / Advanced Java">Programming in Java / Advanced Java</option>
+<option value="Python Programming">Python Programming</option>
+<option value="Requiremnets engineering and management">Requiremnets engineering and management</option>
+<option value="Rigging">Rigging</option>
+<option value="Scripting and Storyboarding Techniques">Scripting and Storyboarding Techniques</option>
+<option value="Scripting Language">Scripting Language</option>
+<option value="Semantic Web">Semantic Web</option>
+<option value="Soft Computing">Soft Computing</option>
+<option value="Software Architecture and Design">Software Architecture and Design</option>
+<option value="Software Configuration Management">Software Configuration Management</option>
+<option value="Software Engineering-Principles and Practices">Software Engineering-Principles and Practices</option>
+<option value="Software Inspection">Software Inspection</option>
+<option value="Software Project Management">Software Project Management</option>
+<option value="Software Reuse">Software Reuse</option>
+<option value="Software Testing / Advanced Software Testing">Software Testing / Advanced Software Testing</option>
+<option value="Storage Systems and Management / Storage Technologies">Storage Systems and Management / Storage Technologies</option>
+<option value="System programming">System programming</option>
+<option value="Theory of Computation">Theory of Computation</option>
+<option value="Web Technologies">Web Technologies</option>
+<option value="Wireless Mobile Networking">Wireless Mobile Networking</option>
+
+
+                                  </select>
+                                </div> 
+                                <div class="form-group">
+                                  <select class="form-control" name="theory2" id="theory2" onchange="validate()">
+								    <option value="nill">--select--</option>
+
+<option value=".Net Programming">.Net Programming</option>
+<option value="3D Animation">3D Animation</option>
+<option value="Advanced Compositing">Advanced Compositing</option>
+<option value="Agile software development ">Agile software development </option>
+<option value="Android Programming">Android Programming</option>
+<option value="Artificial Intelligence">Artificial Intelligence</option>
+<option value="Big Data Analytics">Big Data Analytics</option>
+<option value="Biometric Systems">Biometric Systems</option>
+<option value="Cloud computing and virtualization ">Cloud computing and virtualization </option>
+<option value="Computational Thinking">Computational Thinking</option>
+<option value="Computer Architecture and Organization">Computer Architecture and Organization</option>
+<option value="Computer Graphics / Computer Graphics and Multimedia">Computer Graphics / Computer Graphics and Multimedia</option>
+<option value="Computer Hardware">Computer Hardware</option>
+<option value="Cryptography ">Cryptography </option>
+<option value="Data Analytics ">Data Analytics </option>
+<option value="Data Communication and Computer Networks">Data Communication and Computer Networks</option>
+<option value="Data Structures / Advanced Data structures and algorithms ">Data Structures / Advanced Data structures and algorithms </option>
+<option value="Data Ware housing and Data Mining">Data Ware housing and Data Mining</option>
+<option value="Database Mangement Systems">Database Mangement Systems</option>
+<option value="Design Fundamentals">Design Fundamentals</option>
+<option value="Design Patterns">Design Patterns</option>
+<option value="Digital Cinematography">Digital Cinematography</option>
+<option value="Digital Image Procesing">Digital Image Procesing</option>
+<option value="Digital Logic and Microprocessor / Digital Computer Fundamentals / Advanced digital communication ">Digital Logic and Microprocessor / Digital Computer Fundamentals / Advanced digital communication </option>
+<option value="Distributed Systems">Distributed Systems</option>
+<option value="E-Goverance">E-Goverance</option>
+<option value="Embedded system / Advanced Embedded systems">Embedded system / Advanced Embedded systems</option>
+<option value="Enterprise Resource Planning">Enterprise Resource Planning</option>
+<option value="Fundamentals of Art">Fundamentals of Art</option>
+<option value="Game Development">Game Development</option>
+<option value="Graph Theory and Its Applications">Graph Theory and Its Applications</option>
+<option value="Graphic Design Techniques">Graphic Design Techniques</option>
+<option value="Human Computer Interaction / Principles of User Inerface Design">Human Computer Interaction / Principles of User Inerface Design</option>
+<option value="Information and System  Security / Network and Information Security">Information and System  Security / Network and Information Security</option>
+<option value="Internet of Things">Internet of Things</option>
+<option value="Machine Learning">Machine Learning</option>
+<option value="Mainframe Computing">Mainframe Computing</option>
+<option value="Media Ethics">Media Ethics</option>
+<option value="Mobile Application Development">Mobile Application Development</option>
+<option value="Modeling and Texturing">Modeling and Texturing</option>
+<option value="Multimedia Computing">Multimedia Computing</option>
+<option value="Network Administration">Network Administration</option>
+<option value="Network Management Systems">Network Management Systems</option>
+<option value="Network Programming">Network Programming</option>
+<option value="Object Oriented  Analysis and Design">Object Oriented  Analysis and Design</option>
+<option value="Object Oriented Programming">Object Oriented Programming</option>
+<option value="Object Oriented Software Engineering ">Object Oriented Software Engineering </option>
+<option value="Open Source Programming">Open Source Programming</option>
+<option value="Operating Systems">Operating Systems</option>
+<option value="Optimization techniques">Optimization techniques</option>
+<option value="Programming in Java / Advanced Java">Programming in Java / Advanced Java</option>
+<option value="Python Programming">Python Programming</option>
+<option value="Requiremnets engineering and management">Requiremnets engineering and management</option>
+<option value="Rigging">Rigging</option>
+<option value="Scripting and Storyboarding Techniques">Scripting and Storyboarding Techniques</option>
+<option value="Scripting Language">Scripting Language</option>
+<option value="Semantic Web">Semantic Web</option>
+<option value="Soft Computing">Soft Computing</option>
+<option value="Software Architecture and Design">Software Architecture and Design</option>
+<option value="Software Configuration Management">Software Configuration Management</option>
+<option value="Software Engineering-Principles and Practices">Software Engineering-Principles and Practices</option>
+<option value="Software Inspection">Software Inspection</option>
+<option value="Software Project Management">Software Project Management</option>
+<option value="Software Reuse">Software Reuse</option>
+<option value="Software Testing / Advanced Software Testing">Software Testing / Advanced Software Testing</option>
+<option value="Storage Systems and Management / Storage Technologies">Storage Systems and Management / Storage Technologies</option>
+<option value="System programming">System programming</option>
+<option value="Theory of Computation">Theory of Computation</option>
+<option value="Web Technologies">Web Technologies</option>
+<option value="Wireless Mobile Networking">Wireless Mobile Networking</option>
+
+
+                                  
+                                  </select>
+                                </div>  
+                                <div class="form-group">
+                                  <select class="form-control" name="theory3" id="theory3" onchange="validate()">
+								    <option value="nill">--select--</option>
+
+<option value=".Net Programming">.Net Programming</option>
+<option value="3D Animation">3D Animation</option>
+<option value="Advanced Compositing">Advanced Compositing</option>
+<option value="Agile software development ">Agile software development </option>
+<option value="Android Programming">Android Programming</option>
+<option value="Artificial Intelligence">Artificial Intelligence</option>
+<option value="Big Data Analytics">Big Data Analytics</option>
+<option value="Biometric Systems">Biometric Systems</option>
+<option value="Cloud computing and virtualization ">Cloud computing and virtualization </option>
+<option value="Computational Thinking">Computational Thinking</option>
+<option value="Computer Architecture and Organization">Computer Architecture and Organization</option>
+<option value="Computer Graphics / Computer Graphics and Multimedia">Computer Graphics / Computer Graphics and Multimedia</option>
+<option value="Computer Hardware">Computer Hardware</option>
+<option value="Cryptography ">Cryptography </option>
+<option value="Data Analytics ">Data Analytics </option>
+<option value="Data Communication and Computer Networks">Data Communication and Computer Networks</option>
+<option value="Data Structures / Advanced Data structures and algorithms ">Data Structures / Advanced Data structures and algorithms </option>
+<option value="Data Ware housing and Data Mining">Data Ware housing and Data Mining</option>
+<option value="Database Mangement Systems">Database Mangement Systems</option>
+<option value="Design Fundamentals">Design Fundamentals</option>
+<option value="Design Patterns">Design Patterns</option>
+<option value="Digital Cinematography">Digital Cinematography</option>
+<option value="Digital Image Procesing">Digital Image Procesing</option>
+<option value="Digital Logic and Microprocessor / Digital Computer Fundamentals / Advanced digital communication ">Digital Logic and Microprocessor / Digital Computer Fundamentals / Advanced digital communication </option>
+<option value="Distributed Systems">Distributed Systems</option>
+<option value="E-Goverance">E-Goverance</option>
+<option value="Embedded system / Advanced Embedded systems">Embedded system / Advanced Embedded systems</option>
+<option value="Enterprise Resource Planning">Enterprise Resource Planning</option>
+<option value="Fundamentals of Art">Fundamentals of Art</option>
+<option value="Game Development">Game Development</option>
+<option value="Graph Theory and Its Applications">Graph Theory and Its Applications</option>
+<option value="Graphic Design Techniques">Graphic Design Techniques</option>
+<option value="Human Computer Interaction / Principles of User Inerface Design">Human Computer Interaction / Principles of User Inerface Design</option>
+<option value="Information and System  Security / Network and Information Security">Information and System  Security / Network and Information Security</option>
+<option value="Internet of Things">Internet of Things</option>
+<option value="Machine Learning">Machine Learning</option>
+<option value="Mainframe Computing">Mainframe Computing</option>
+<option value="Media Ethics">Media Ethics</option>
+<option value="Mobile Application Development">Mobile Application Development</option>
+<option value="Modeling and Texturing">Modeling and Texturing</option>
+<option value="Multimedia Computing">Multimedia Computing</option>
+<option value="Network Administration">Network Administration</option>
+<option value="Network Management Systems">Network Management Systems</option>
+<option value="Network Programming">Network Programming</option>
+<option value="Object Oriented  Analysis and Design">Object Oriented  Analysis and Design</option>
+<option value="Object Oriented Programming">Object Oriented Programming</option>
+<option value="Object Oriented Software Engineering ">Object Oriented Software Engineering </option>
+<option value="Open Source Programming">Open Source Programming</option>
+<option value="Operating Systems">Operating Systems</option>
+<option value="Optimization techniques">Optimization techniques</option>
+<option value="Programming in Java / Advanced Java">Programming in Java / Advanced Java</option>
+<option value="Python Programming">Python Programming</option>
+<option value="Requiremnets engineering and management">Requiremnets engineering and management</option>
+<option value="Rigging">Rigging</option>
+<option value="Scripting and Storyboarding Techniques">Scripting and Storyboarding Techniques</option>
+<option value="Scripting Language">Scripting Language</option>
+<option value="Semantic Web">Semantic Web</option>
+<option value="Soft Computing">Soft Computing</option>
+<option value="Software Architecture and Design">Software Architecture and Design</option>
+<option value="Software Configuration Management">Software Configuration Management</option>
+<option value="Software Engineering-Principles and Practices">Software Engineering-Principles and Practices</option>
+<option value="Software Inspection">Software Inspection</option>
+<option value="Software Project Management">Software Project Management</option>
+<option value="Software Reuse">Software Reuse</option>
+<option value="Software Testing / Advanced Software Testing">Software Testing / Advanced Software Testing</option>
+<option value="Storage Systems and Management / Storage Technologies">Storage Systems and Management / Storage Technologies</option>
+<option value="System programming">System programming</option>
+<option value="Theory of Computation">Theory of Computation</option>
+<option value="Web Technologies">Web Technologies</option>
+<option value="Wireless Mobile Networking">Wireless Mobile Networking</option>
+
+                               
+                                  </select>
+                                </div>  
+                                <div class="form-group">
+                                  <select class="form-control" name="theory4" id="theory4" onchange="validate()">
+								    <option value="nill">--select--</option>
+
+<option value=".Net Programming">.Net Programming</option>
+<option value="3D Animation">3D Animation</option>
+<option value="Advanced Compositing">Advanced Compositing</option>
+<option value="Agile software development ">Agile software development </option>
+<option value="Android Programming">Android Programming</option>
+<option value="Artificial Intelligence">Artificial Intelligence</option>
+<option value="Big Data Analytics">Big Data Analytics</option>
+<option value="Biometric Systems">Biometric Systems</option>
+<option value="Cloud computing and virtualization ">Cloud computing and virtualization </option>
+<option value="Computational Thinking">Computational Thinking</option>
+<option value="Computer Architecture and Organization">Computer Architecture and Organization</option>
+<option value="Computer Graphics / Computer Graphics and Multimedia">Computer Graphics / Computer Graphics and Multimedia</option>
+<option value="Computer Hardware">Computer Hardware</option>
+<option value="Cryptography ">Cryptography </option>
+<option value="Data Analytics ">Data Analytics </option>
+<option value="Data Communication and Computer Networks">Data Communication and Computer Networks</option>
+<option value="Data Structures / Advanced Data structures and algorithms ">Data Structures / Advanced Data structures and algorithms </option>
+<option value="Data Ware housing and Data Mining">Data Ware housing and Data Mining</option>
+<option value="Database Mangement Systems">Database Mangement Systems</option>
+<option value="Design Fundamentals">Design Fundamentals</option>
+<option value="Design Patterns">Design Patterns</option>
+<option value="Digital Cinematography">Digital Cinematography</option>
+<option value="Digital Image Procesing">Digital Image Procesing</option>
+<option value="Digital Logic and Microprocessor / Digital Computer Fundamentals / Advanced digital communication ">Digital Logic and Microprocessor / Digital Computer Fundamentals / Advanced digital communication </option>
+<option value="Distributed Systems">Distributed Systems</option>
+<option value="E-Goverance">E-Goverance</option>
+<option value="Embedded system / Advanced Embedded systems">Embedded system / Advanced Embedded systems</option>
+<option value="Enterprise Resource Planning">Enterprise Resource Planning</option>
+<option value="Fundamentals of Art">Fundamentals of Art</option>
+<option value="Game Development">Game Development</option>
+<option value="Graph Theory and Its Applications">Graph Theory and Its Applications</option>
+<option value="Graphic Design Techniques">Graphic Design Techniques</option>
+<option value="Human Computer Interaction / Principles of User Inerface Design">Human Computer Interaction / Principles of User Inerface Design</option>
+<option value="Information and System  Security / Network and Information Security">Information and System  Security / Network and Information Security</option>
+<option value="Internet of Things">Internet of Things</option>
+<option value="Machine Learning">Machine Learning</option>
+<option value="Mainframe Computing">Mainframe Computing</option>
+<option value="Media Ethics">Media Ethics</option>
+<option value="Mobile Application Development">Mobile Application Development</option>
+<option value="Modeling and Texturing">Modeling and Texturing</option>
+<option value="Multimedia Computing">Multimedia Computing</option>
+<option value="Network Administration">Network Administration</option>
+<option value="Network Management Systems">Network Management Systems</option>
+<option value="Network Programming">Network Programming</option>
+<option value="Object Oriented  Analysis and Design">Object Oriented  Analysis and Design</option>
+<option value="Object Oriented Programming">Object Oriented Programming</option>
+<option value="Object Oriented Software Engineering ">Object Oriented Software Engineering </option>
+<option value="Open Source Programming">Open Source Programming</option>
+<option value="Operating Systems">Operating Systems</option>
+<option value="Optimization techniques">Optimization techniques</option>
+<option value="Programming in Java / Advanced Java">Programming in Java / Advanced Java</option>
+<option value="Python Programming">Python Programming</option>
+<option value="Requiremnets engineering and management">Requiremnets engineering and management</option>
+<option value="Rigging">Rigging</option>
+<option value="Scripting and Storyboarding Techniques">Scripting and Storyboarding Techniques</option>
+<option value="Scripting Language">Scripting Language</option>
+<option value="Semantic Web">Semantic Web</option>
+<option value="Soft Computing">Soft Computing</option>
+<option value="Software Architecture and Design">Software Architecture and Design</option>
+<option value="Software Configuration Management">Software Configuration Management</option>
+<option value="Software Engineering-Principles and Practices">Software Engineering-Principles and Practices</option>
+<option value="Software Inspection">Software Inspection</option>
+<option value="Software Project Management">Software Project Management</option>
+<option value="Software Reuse">Software Reuse</option>
+<option value="Software Testing / Advanced Software Testing">Software Testing / Advanced Software Testing</option>
+<option value="Storage Systems and Management / Storage Technologies">Storage Systems and Management / Storage Technologies</option>
+<option value="System programming">System programming</option>
+<option value="Theory of Computation">Theory of Computation</option>
+<option value="Web Technologies">Web Technologies</option>
+<option value="Wireless Mobile Networking">Wireless Mobile Networking</option>
+
+                                  </select>
+                                </div>  
+                                <div class="form-group">
+                                  <select class="form-control" name="theory5" id="theory5" onchange="validate()">
+								    <option value="nill">--select--</option>
+
+<option value=".Net Programming">.Net Programming</option>
+<option value="3D Animation">3D Animation</option>
+<option value="Advanced Compositing">Advanced Compositing</option>
+<option value="Agile software development ">Agile software development </option>
+<option value="Android Programming">Android Programming</option>
+<option value="Artificial Intelligence">Artificial Intelligence</option>
+<option value="Big Data Analytics">Big Data Analytics</option>
+<option value="Biometric Systems">Biometric Systems</option>
+<option value="Cloud computing and virtualization ">Cloud computing and virtualization </option>
+<option value="Computational Thinking">Computational Thinking</option>
+<option value="Computer Architecture and Organization">Computer Architecture and Organization</option>
+<option value="Computer Graphics / Computer Graphics and Multimedia">Computer Graphics / Computer Graphics and Multimedia</option>
+<option value="Computer Hardware">Computer Hardware</option>
+<option value="Cryptography ">Cryptography </option>
+<option value="Data Analytics ">Data Analytics </option>
+<option value="Data Communication and Computer Networks">Data Communication and Computer Networks</option>
+<option value="Data Structures / Advanced Data structures and algorithms ">Data Structures / Advanced Data structures and algorithms </option>
+<option value="Data Ware housing and Data Mining">Data Ware housing and Data Mining</option>
+<option value="Database Mangement Systems">Database Mangement Systems</option>
+<option value="Design Fundamentals">Design Fundamentals</option>
+<option value="Design Patterns">Design Patterns</option>
+<option value="Digital Cinematography">Digital Cinematography</option>
+<option value="Digital Image Procesing">Digital Image Procesing</option>
+<option value="Digital Logic and Microprocessor / Digital Computer Fundamentals / Advanced digital communication ">Digital Logic and Microprocessor / Digital Computer Fundamentals / Advanced digital communication </option>
+<option value="Distributed Systems">Distributed Systems</option>
+<option value="E-Goverance">E-Goverance</option>
+<option value="Embedded system / Advanced Embedded systems">Embedded system / Advanced Embedded systems</option>
+<option value="Enterprise Resource Planning">Enterprise Resource Planning</option>
+<option value="Fundamentals of Art">Fundamentals of Art</option>
+<option value="Game Development">Game Development</option>
+<option value="Graph Theory and Its Applications">Graph Theory and Its Applications</option>
+<option value="Graphic Design Techniques">Graphic Design Techniques</option>
+<option value="Human Computer Interaction / Principles of User Inerface Design">Human Computer Interaction / Principles of User Inerface Design</option>
+<option value="Information and System  Security / Network and Information Security">Information and System  Security / Network and Information Security</option>
+<option value="Internet of Things">Internet of Things</option>
+<option value="Machine Learning">Machine Learning</option>
+<option value="Mainframe Computing">Mainframe Computing</option>
+<option value="Media Ethics">Media Ethics</option>
+<option value="Mobile Application Development">Mobile Application Development</option>
+<option value="Modeling and Texturing">Modeling and Texturing</option>
+<option value="Multimedia Computing">Multimedia Computing</option>
+<option value="Network Administration">Network Administration</option>
+<option value="Network Management Systems">Network Management Systems</option>
+<option value="Network Programming">Network Programming</option>
+<option value="Object Oriented  Analysis and Design">Object Oriented  Analysis and Design</option>
+<option value="Object Oriented Programming">Object Oriented Programming</option>
+<option value="Object Oriented Software Engineering ">Object Oriented Software Engineering </option>
+<option value="Open Source Programming">Open Source Programming</option>
+<option value="Operating Systems">Operating Systems</option>
+<option value="Optimization techniques">Optimization techniques</option>
+<option value="Programming in Java / Advanced Java">Programming in Java / Advanced Java</option>
+<option value="Python Programming">Python Programming</option>
+<option value="Requiremnets engineering and management">Requiremnets engineering and management</option>
+<option value="Rigging">Rigging</option>
+<option value="Scripting and Storyboarding Techniques">Scripting and Storyboarding Techniques</option>
+<option value="Scripting Language">Scripting Language</option>
+<option value="Semantic Web">Semantic Web</option>
+<option value="Soft Computing">Soft Computing</option>
+<option value="Software Architecture and Design">Software Architecture and Design</option>
+<option value="Software Configuration Management">Software Configuration Management</option>
+<option value="Software Engineering-Principles and Practices">Software Engineering-Principles and Practices</option>
+<option value="Software Inspection">Software Inspection</option>
+<option value="Software Project Management">Software Project Management</option>
+<option value="Software Reuse">Software Reuse</option>
+<option value="Software Testing / Advanced Software Testing">Software Testing / Advanced Software Testing</option>
+<option value="Storage Systems and Management / Storage Technologies">Storage Systems and Management / Storage Technologies</option>
+<option value="System programming">System programming</option>
+<option value="Theory of Computation">Theory of Computation</option>
+<option value="Web Technologies">Web Technologies</option>
+<option value="Wireless Mobile Networking">Wireless Mobile Networking</option>
+
+
+                                  </select>
+                                </div>   
+
+
+<div class="form-group">
+                                  <select class="form-control" name="theory6" id="theory6" onchange="validate()">
+								    <option value="nill">--select--</option>
+
+<option value=".Net Programming">.Net Programming</option>
+<option value="3D Animation">3D Animation</option>
+<option value="Advanced Compositing">Advanced Compositing</option>
+<option value="Agile software development ">Agile software development </option>
+<option value="Android Programming">Android Programming</option>
+<option value="Artificial Intelligence">Artificial Intelligence</option>
+<option value="Big Data Analytics">Big Data Analytics</option>
+<option value="Biometric Systems">Biometric Systems</option>
+<option value="Cloud computing and virtualization ">Cloud computing and virtualization </option>
+<option value="Computational Thinking">Computational Thinking</option>
+<option value="Computer Architecture and Organization">Computer Architecture and Organization</option>
+<option value="Computer Graphics / Computer Graphics and Multimedia">Computer Graphics / Computer Graphics and Multimedia</option>
+<option value="Computer Hardware">Computer Hardware</option>
+<option value="Cryptography ">Cryptography </option>
+<option value="Data Analytics ">Data Analytics </option>
+<option value="Data Communication and Computer Networks">Data Communication and Computer Networks</option>
+<option value="Data Structures / Advanced Data structures and algorithms ">Data Structures / Advanced Data structures and algorithms </option>
+<option value="Data Ware housing and Data Mining">Data Ware housing and Data Mining</option>
+<option value="Database Mangement Systems">Database Mangement Systems</option>
+<option value="Design Fundamentals">Design Fundamentals</option>
+<option value="Design Patterns">Design Patterns</option>
+<option value="Digital Cinematography">Digital Cinematography</option>
+<option value="Digital Image Procesing">Digital Image Procesing</option>
+<option value="Digital Logic and Microprocessor / Digital Computer Fundamentals / Advanced digital communication ">Digital Logic and Microprocessor / Digital Computer Fundamentals / Advanced digital communication </option>
+<option value="Distributed Systems">Distributed Systems</option>
+<option value="E-Goverance">E-Goverance</option>
+<option value="Embedded system / Advanced Embedded systems">Embedded system / Advanced Embedded systems</option>
+<option value="Enterprise Resource Planning">Enterprise Resource Planning</option>
+<option value="Fundamentals of Art">Fundamentals of Art</option>
+<option value="Game Development">Game Development</option>
+<option value="Graph Theory and Its Applications">Graph Theory and Its Applications</option>
+<option value="Graphic Design Techniques">Graphic Design Techniques</option>
+<option value="Human Computer Interaction / Principles of User Inerface Design">Human Computer Interaction / Principles of User Inerface Design</option>
+<option value="Information and System  Security / Network and Information Security">Information and System  Security / Network and Information Security</option>
+<option value="Internet of Things">Internet of Things</option>
+<option value="Machine Learning">Machine Learning</option>
+<option value="Mainframe Computing">Mainframe Computing</option>
+<option value="Media Ethics">Media Ethics</option>
+<option value="Mobile Application Development">Mobile Application Development</option>
+<option value="Modeling and Texturing">Modeling and Texturing</option>
+<option value="Multimedia Computing">Multimedia Computing</option>
+<option value="Network Administration">Network Administration</option>
+<option value="Network Management Systems">Network Management Systems</option>
+<option value="Network Programming">Network Programming</option>
+<option value="Object Oriented  Analysis and Design">Object Oriented  Analysis and Design</option>
+<option value="Object Oriented Programming">Object Oriented Programming</option>
+<option value="Object Oriented Software Engineering ">Object Oriented Software Engineering </option>
+<option value="Open Source Programming">Open Source Programming</option>
+<option value="Operating Systems">Operating Systems</option>
+<option value="Optimization techniques">Optimization techniques</option>
+<option value="Programming in Java / Advanced Java">Programming in Java / Advanced Java</option>
+<option value="Python Programming">Python Programming</option>
+<option value="Requiremnets engineering and management">Requiremnets engineering and management</option>
+<option value="Rigging">Rigging</option>
+<option value="Scripting and Storyboarding Techniques">Scripting and Storyboarding Techniques</option>
+<option value="Scripting Language">Scripting Language</option>
+<option value="Semantic Web">Semantic Web</option>
+<option value="Soft Computing">Soft Computing</option>
+<option value="Software Architecture and Design">Software Architecture and Design</option>
+<option value="Software Configuration Management">Software Configuration Management</option>
+<option value="Software Engineering-Principles and Practices">Software Engineering-Principles and Practices</option>
+<option value="Software Inspection">Software Inspection</option>
+<option value="Software Project Management">Software Project Management</option>
+<option value="Software Reuse">Software Reuse</option>
+<option value="Software Testing / Advanced Software Testing">Software Testing / Advanced Software Testing</option>
+<option value="Storage Systems and Management / Storage Technologies">Storage Systems and Management / Storage Technologies</option>
+<option value="System programming">System programming</option>
+<option value="Theory of Computation">Theory of Computation</option>
+<option value="Web Technologies">Web Technologies</option>
+<option value="Wireless Mobile Networking">Wireless Mobile Networking</option>
+
+                                  </select>
+                                </div>								
+                            </div>
+                            
+                        
+                           <div class="row">
+						    <div class="col-md-12">
+							<button type="submit" class="btn btn-danger center-block" id='sub' disabled="disabled">Submit</button>
+							</div>
+						   </div>
+                        </form>
+                        </div>
+                    </div> 
+						
+                
+            </div>
+			
+            
+          
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+  
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Admin Page</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="admin.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+  <nav class="navbar navbar-inverse navbar-top" role="navigation">
+                 <div class="navbar-header">
+                      <a class="navbar-brand" href="index.html">
+                        <img alt="Brand" src="images/logo.png" id="brand-image">
+                      </a>
+                </div>
+                
+
+                <div class="notices">           
+                <h3 class="navbar-text">School of Information Technology and Engineering</h3>
+                <p class="navbar-text"><span id="dept">Department of Software and Systems Engineering</span></p>
+                <p class="navbar-text">Admin Panel</p>
+                </div>  
+               
+            </nav>
+  
+            <div class="container"><!-- Container Start -->
+                <div class="row"><!-- Row Start -->
+                    <div class="col-md-offset-3 col-md-6"><!--Col6 start-->
+                            
+                            
+                            <form class="form-horizontal" method="POST" class="form-inline" role="form" action="adminsamp.php">
+                                
+                                <div class="form-group">
+                                  <label for="theory" class="col-md-4 control-label">Theory Course</label>
+                                  <div class="col-md-8">
+                                      <select class="form-control" id="theory" name="theory">
+                                    <option value="select">-- Select --</option>
+                                   
+<option value=".Net Programming">.Net Programming</option>
+<option value="3D Animation">3D Animation</option>
+<option value="Advanced Compositing">Advanced Compositing</option>
+<option value="Agile software development ">Agile software development </option>
+<option value="Android Programming">Android Programming</option>
+<option value="Artificial Intelligence">Artificial Intelligence</option>
+<option value="Big Data Analytics">Big Data Analytics</option>
+<option value="Biometric Systems">Biometric Systems</option>
+<option value="Cloud computing and virtualization ">Cloud computing and virtualization </option>
+<option value="Computational Thinking">Computational Thinking</option>
+<option value="Computer Architecture and Organization">Computer Architecture and Organization</option>
+<option value="Computer Graphics / Computer Graphics and Multimedia">Computer Graphics / Computer Graphics and Multimedia</option>
+<option value="Computer Hardware">Computer Hardware</option>
+<option value="Cryptography ">Cryptography </option>
+<option value="Data Analytics ">Data Analytics </option>
+<option value="Data Communication and Computer Networks">Data Communication and Computer Networks</option>
+<option value="Data Structures / Advanced Data structures and algorithms ">Data Structures / Advanced Data structures and algorithms </option>
+<option value="Data Ware housing and Data Mining">Data Ware housing and Data Mining</option>
+<option value="Database Mangement Systems">Database Mangement Systems</option>
+<option value="Design Fundamentals">Design Fundamentals</option>
+<option value="Design Patterns">Design Patterns</option>
+<option value="Digital Cinematography">Digital Cinematography</option>
+<option value="Digital Image Procesing">Digital Image Procesing</option>
+<option value="Digital Logic and Microprocessor / Digital Computer Fundamentals / Advanced digital communication ">Digital Logic and Microprocessor / Digital Computer Fundamentals / Advanced digital communication </option>
+<option value="Distributed Systems">Distributed Systems</option>
+<option value="E-Goverance">E-Goverance</option>
+<option value="Embedded system / Advanced Embedded systems">Embedded system / Advanced Embedded systems</option>
+<option value="Enterprise Resource Planning">Enterprise Resource Planning</option>
+<option value="Fundamentals of Art">Fundamentals of Art</option>
+<option value="Game Development">Game Development</option>
+<option value="Graph Theory and Its Applications">Graph Theory and Its Applications</option>
+<option value="Graphic Design Techniques">Graphic Design Techniques</option>
+<option value="Human Computer Interaction / Principles of User Inerface Design">Human Computer Interaction / Principles of User Inerface Design</option>
+<option value="Information and System  Security / Network and Information Security">Information and System  Security / Network and Information Security</option>
+<option value="Internet of Things">Internet of Things</option>
+<option value="Machine Learning">Machine Learning</option>
+<option value="Mainframe Computing">Mainframe Computing</option>
+<option value="Media Ethics">Media Ethics</option>
+<option value="Mobile Application Development">Mobile Application Development</option>
+<option value="Modeling and Texturing">Modeling and Texturing</option>
+<option value="Multimedia Computing">Multimedia Computing</option>
+<option value="Network Administration">Network Administration</option>
+<option value="Network Management Systems">Network Management Systems</option>
+<option value="Network Programming">Network Programming</option>
+<option value="Object Oriented  Analysis and Design">Object Oriented  Analysis and Design</option>
+<option value="Object Oriented Programming">Object Oriented Programming</option>
+<option value="Object Oriented Software Engineering ">Object Oriented Software Engineering </option>
+<option value="Open Source Programming">Open Source Programming</option>
+<option value="Operating Systems">Operating Systems</option>
+<option value="Optimization techniques">Optimization techniques</option>
+<option value="Programming in Java / Advanced Java">Programming in Java / Advanced Java</option>
+<option value="Python Programming">Python Programming</option>
+<option value="Requiremnets engineering and management">Requiremnets engineering and management</option>
+<option value="Rigging">Rigging</option>
+<option value="Scripting and Storyboarding Techniques">Scripting and Storyboarding Techniques</option>
+<option value="Scripting Language">Scripting Language</option>
+<option value="Semantic Web">Semantic Web</option>
+<option value="Soft Computing">Soft Computing</option>
+<option value="Software Architecture and Design">Software Architecture and Design</option>
+<option value="Software Configuration Management">Software Configuration Management</option>
+<option value="Software Engineering-Principles and Practices">Software Engineering-Principles and Practices</option>
+<option value="Software Inspection">Software Inspection</option>
+<option value="Software Project Management">Software Project Management</option>
+<option value="Software Reuse">Software Reuse</option>
+<option value="Software Testing / Advanced Software Testing">Software Testing / Advanced Software Testing</option>
+<option value="Storage Systems and Management / Storage Technologies">Storage Systems and Management / Storage Technologies</option>
+<option value="System programming">System programming</option>
+<option value="Theory of Computation">Theory of Computation</option>
+<option value="Web Technologies">Web Technologies</option>
+<option value="Wireless Mobile Networking">Wireless Mobile Networking</option>
+
+
+                                  </select>
+                                  </div>
+                                </div>
+                                
+                         
+                             
+                              <div class="form-group">
+                                <label for="empid" class="col-md-4 control-label">Employee-ID</label>
+                                <div class="col-md-8">
+                                  <input type="text" class="form-control" id="empid" placeholder="Employee ID" name="id" >
+                                </div>
+                              </div>
+                              
+                              <div class="form-group">
+                                <div class="col-sm-offset-2">
+                                  <div class="checkbox">
+                                    <label>
+                                      <input type="checkbox" name="db" value="complete"> <h3>Download complete Database Excel Sheet</h3>
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <div class="col-sm-offset-5 col-sm-9">
+                                  <button type="submit" class="btn btn-primary">Submit</button>
+                                 </div>
+                              </div>
+                            </form>
+                   
+                    </div><!--Col6 end-->
+                </div><!-- Row End -->
+            </div><!-- Container end -->
+            
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+update faculty set theory1='empty',theory2='empty',theory3='empty',theory4='empty',theory5='empty',theory6='empty';
